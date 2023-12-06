@@ -25,7 +25,7 @@
 #include <utility>
 #include <vector>
 
-#include "b3/blake3.h"
+#include "blake3.h"
 #include "bits.hpp"
 #include "chacha8.h"
 #include "pos_constants.hpp"
@@ -209,8 +209,8 @@ public:
 
         this->rmap.resize(kBC);
         if (!initialized) {
-            initialized = true;
             load_tables();
+            initialized = true;
         }
     }
 
